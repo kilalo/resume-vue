@@ -1,0 +1,24 @@
+.scroller {
+  white-space: nowrap;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  padding: 1em 0;
+  width: 100%;
+  
+  & > .grid > div,
+  .container > .grid > div {
+    float: none;
+    display: inline-block;
+    white-space: normal;
+  }
+  
+}
+
+.scroller--no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

@@ -1,0 +1,12 @@
+.panel {
+  background: color(white);
+  padding: 1em;
+}
+
+.panel--bottom {
+  position: fixed;
+  bottom: 0;
+  z-index: 99;
+  left: 0;
+  right: 0;
+}

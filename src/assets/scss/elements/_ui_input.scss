@@ -1,0 +1,35 @@
+.ui_input{
+  position: relative;
+  z-index: 0;
+}
+
+.ui_input--icon > input {
+  padding-left: 2em;
+}
+
+.ui_input--icon-right > input {
+  padding-left: 0.5em;
+  padding-right: 2em;
+}
+
+.ui_input-status {
+  position: absolute;
+  top: 0.6em;
+  right: 0.8em;
+}
+
+.ui_input-icon {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  font-size: 1em;
+  width: 2rem;
+  text-align: center;
+  transform: translateY(-50%);
+  left: 0;
+}
+
+.ui_input--icon-right .ui_input-icon {
+  left: auto;
+  right: 0;
+}

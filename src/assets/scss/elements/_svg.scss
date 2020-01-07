@@ -1,0 +1,57 @@
+.svg {
+  position: relative;
+
+  & > svg {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    vertical-align: bottom;
+  }
+}
+
+.svg--inside,
+.svg--outside {
+  &.svg--top,
+  &.svg--bottom {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+
+    & > svg {
+      width: 102%;
+      margin: 0 -1%;
+    }
+  }
+}
+
+.svg--outside {
+  &.svg--top {
+    bottom: 100%;
+    margin-bottom: -1px;
+  }
+  &.svg--bottom {
+    top: 100%;
+    margin-top: -1px;
+  }
+}
+
+.svg--inside {
+  &.svg--top {
+    top: 0;
+    margin-top: -1px;
+  }
+  &.svg--bottom {
+    bottom: 0;
+    margin-bottom: -1px;
+  }
+}
+
+.svg--top > svg {
+  vertical-align: top;
+}
+
+.svg--bottom > svg {
+  vertical-align: bottom;
+}

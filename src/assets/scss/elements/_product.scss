@@ -1,0 +1,133 @@
+.product-item {
+  position: relative;
+  color: inherit;
+  background: none;
+  
+  a {
+    color: inherit;
+  }
+
+  .image {
+    border-radius: 0.2em;
+    transform: translateZ(0) scale(1);
+    transition: 0.3s ease;
+    box-shadow: 0 0.4em 1.2em fade-out(black, 1);
+  }
+
+  .image img {
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  &:hover {
+    .image {
+      transform: translateZ(0) scale(1.01);
+      box-shadow: 0 0.4em 1.2em fade-out(black, 0.9);
+    }
+  }
+}
+
+.product-item-content {
+  padding: 0.5em;
+  @include mq(tablet) { padding: 0.5em 1em }
+}
+
+.product-item-title {
+  padding: 0.25em 0;
+  border-bottom: 1px solid color(light);
+
+  p {
+    font-size: 1.2em;
+    margin: 0;
+  }
+
+  small {
+
+  }
+}
+
+.product-info * {
+  color: inherit !important;
+  background-color: inherit !important;
+}
+
+.product-item-price {
+  padding: 0.25em 0;
+  font-size: 1em;
+  @include mq(tablet) { font-size: 2vw }
+  @include mq(hd) { font-size: 1.8em }
+}
+
+.product-item-actions {
+  position: absolute;
+  z-index: 5;
+  text-align: right;
+  width: 100%;
+  padding: 0.5em;
+
+  .button {
+    background-color: transparent;
+    display: block;
+    white-space: nowrap;
+  }
+
+  .button > i,
+  .button > span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .button > i {
+    font-size: 1.5em;
+    vertical-align: -0.25em;
+  }
+
+  .button > span {
+    display: inline-block;
+    visibility: hidden;
+    opacity: 0;
+    transition: transition();
+  }
+
+  .button:hover {
+    background-color: color(white);
+    > span {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.product-section-title {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.product-block {
+  width: 1.6em;
+  border-bottom: 0.8em solid;
+  margin-right: 0.4em;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.product-similar-container {
+  @include mq('tablet') {
+    padding-left: 5em !important;
+    padding-right: 5em !important;
+  }
+  @include mq('desktop') {
+    padding-left: 8em !important;
+    padding-right: 8em !important;
+  }
+}
+
+.product-similar-block {
+  width: 1.6em;
+  height: 0.8em;
+}
+
+.product-similar-title {
+  padding-left: 2.4em;
+}

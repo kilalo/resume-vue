@@ -1,0 +1,42 @@
+.footer {
+  padding: 1em 0 2em 0;
+
+  a {
+    font-weight: 500
+  }
+}
+
+.footer-logo {
+  margin: auto;
+  max-width: 12em;
+}
+.footer--nav {
+  min-height: 3.5em;
+  position: relative;
+  .footer-item {
+    display: flex;
+    padding: 0 0.5em;
+    & > img {
+      max-height: 1.5em;
+      max-width: 25vw;
+      display: block;
+      margin: auto;
+
+    }
+    @include mq(tablet) {
+      width: 100%;
+      & > img {
+        max-height: 2em;
+      }
+    }
+  }
+  .footer-box-left {
+    float: left;
+  }
+  .footer-box-right {
+    float: right;
+    @include mq(tablet) {
+      float: left;    
+    }
+  }
+}

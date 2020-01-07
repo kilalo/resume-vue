@@ -1,0 +1,68 @@
+$spinner-stroke-dasharrays:( s: 31, m: 62, l: 125 );
+$spinner-color: purple !default;
+.spinner {
+    &__svg { animation: 1.4s circle-rotate linear infinite; }
+    &__circle {
+      stroke: $spinner-color;
+      stroke-dashoffset: 0;
+      stroke-linecap: round;
+      fill: none;
+      @each $class, $size in $spinner-stroke-dasharrays {
+        &.--#{$class} {
+          stroke-dasharray: 31;
+          animation:
+            5s circle-#{$class}-dash ease-in-out infinite,
+            5s circle-spin ease-in-out infinite,
+            colors (5s) ease-in-out infinite;;
+        }
+      }
+    }
+  }
+  
+  @keyframes circle-rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  @keyframes circle-spin {
+    12.5% { transform: rotate(0deg); }
+    25% { transform: rotate(240deg); }
+    37.5% { transform: rotate(240deg); }
+    50% { transform: rotate(540deg); }
+    62.5% { transform: rotate(540deg); }
+    75% { transform: rotate(780deg); }
+    87.5% { transform: rotate(780deg); }
+    100% { transform: rotate(1080deg); }
+  }
+  
+  @keyframes colors {
+    0% {
+      stroke: #4285f4;
+    }
+    25% {
+      stroke: #de3e35;
+    }
+    50% {
+      stroke: #f7c223;
+    }
+    75% {
+      stroke: #1b9a59;
+    }
+    100% {
+      stroke: #4285f4;
+    }
+  }
+  
+  @each $class, $size in $spinner-stroke-dasharrays {
+    @keyframes circle-#{$class}-dash {
+      0% { stroke-dashoffset: $size; }
+      12.5% { stroke-dashoffset: $size/4; }
+      25% { stroke-dashoffset: $size; }
+      37.5% { stroke-dashoffset: $size/4; }
+      50% { stroke-dashoffset: $size; }
+      62.5% { stroke-dashoffset: $size/4; }
+      75% { stroke-dashoffset: $size; }
+      87.5% { stroke-dashoffset: $size/4; }
+      100% { stroke-dashoffset: $size; }
+    }
+  }

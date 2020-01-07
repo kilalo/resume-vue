@@ -1,0 +1,49 @@
+.number {
+  position: relative;
+  display: inline-block;
+}
+
+.number > .button {
+  position: absolute;
+  padding-left: 0;
+  padding-right: 0;
+  width: 2em;
+  height: 2em;
+  top: 50%;
+  transform: translateY(-50%);
+  color: inherit;
+  border-color: inherit;
+  &[disabled] {
+    color: color(gray);
+    border-color: color(gray);
+  }
+
+  &:first-child { left: 5% }
+  &:last-child { right: 5% }
+}
+
+.number > .input {
+  margin: auto;
+  width: 100%;
+  border-bottom: 0;
+  font-size: 2em;
+  text-align: center;
+  color: inherit;
+  display: block;
+  box-shadow: none;
+}
+
+.number-button--outline {
+  .input {
+    font-size: 3em;
+  }
+  .button {
+    border: 2px solid;
+    width: 3.5em;
+    height: 3.5em;
+    i {
+      font-size: 2em;
+    }
+    
+  }
+}

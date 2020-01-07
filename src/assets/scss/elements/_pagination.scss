@@ -1,0 +1,9 @@
+.pagination {
+  width: 100%;
+  text-align: center;
+  padding: 1em;
+}
+
+.pagination-hidden + .pagination-hidden {
+  display: none;
+}

@@ -1,0 +1,132 @@
+.table_data-viewport {
+  display: block;
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+}
+
+.table_data {
+  width: 100%;
+
+  tr, td {
+    display: block;
+    padding: 0;
+  }
+
+  @include mq(tablet) {
+    display: table;
+    tr { display: table-row }
+    td { display: table-cell }
+  }
+}
+
+// row
+.table_data-row,
+.table_data-row_caption {
+  margin-bottom: 1em;
+  padding: 1em;
+  box-shadow: shadow(medium);
+  border-radius: 0.1em;
+
+  @include mq(tablet) {
+    display: table-row;
+    border-bottom: 1px solid fade-out(color(black), 0.5);
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+
+    &:nth-child(even) {
+      background-color: fade-out(color(black), 0.9);
+    }
+  }
+
+  &--hoverable {
+    cursor: pointer;
+  
+    &:hover {
+      background-color: fade-out(color(black), 0.8);
+    }
+  }
+}
+
+.table_data-row_caption {
+  background-color: color(light);
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
+
+  .input {
+    background-color: color(white);
+    margin: 0.25em 0;
+  }
+
+  @include mq(tablet) {
+    display: table-row !important;
+  }
+}
+
+.table_data-row_caption-toggle {
+  display: block;
+  text-align: center;
+  margin-bottom: 1em;
+  @include mq(tablet) {
+    display: none;
+  }
+}
+
+// column
+.table_data-col {
+  display: block;
+  vertical-align: middle;
+  padding: 0.25em;
+  
+  @include mq(tablet) {
+    display: table-cell;
+  }
+
+  &--selectable {
+    @include mq(tablet) {
+      text-align: center;
+    }
+  }
+}
+
+.table_data-col-caption {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 0.8em;
+  min-width: 6em;
+  
+  @include mq(tablet) {
+    display: none;
+  }
+}
+
+// caption
+.table_data-caption {
+  display: none;
+  padding: 0.25em;
+
+  &--filterable,
+  &--sortable {
+    display: block;
+  }
+
+  @include mq(tablet) {
+    display: table-cell;
+  }
+}
+
+// details
+.table_data-details {
+  display: block;
+  margin-top: -1em;
+  margin-bottom: 1em;
+
+  @include mq(tablet) {
+    display: table-cell;
+    margin: 0;
+  }
+}

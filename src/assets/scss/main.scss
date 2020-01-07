@@ -1,0 +1,234 @@
+// libs
+@import 'vue_color';
+
+// asset
+@import 'base/base';
+
+@import 'elements/autocomplete';
+@import 'elements/button';
+@import 'elements/card';
+@import 'elements/cart';
+@import 'elements/carousel';
+@import 'elements/club';
+@import 'elements/container';
+@import 'elements/count';
+@import 'elements/canvas_custo';
+@import 'elements/dropdown';
+@import 'elements/form';
+@import 'elements/breadcrumb';
+@import 'elements/grid';
+@import 'elements/image';
+@import 'elements/loading';
+@import 'elements/ui_input';
+@import 'elements/ui_select';
+@import 'elements/map';
+@import 'elements/media';
+@import 'elements/menu';
+@import 'elements/message';
+@import 'elements/modal';
+@import 'elements/navbar';
+@import 'elements/number';
+@import 'elements/pack';
+@import 'elements/product';
+@import 'elements/combinations';
+@import 'elements/panel';
+@import 'elements/pagination';
+@import 'elements/progress';
+@import 'elements/scroller';
+@import 'elements/section';
+@import 'elements/spinner';
+@import 'elements/switch';
+@import 'elements/range';
+@import 'elements/sticky';
+@import 'elements/table';
+@import 'elements/table_data';
+@import 'elements/timeline';
+@import 'elements/overlaye';
+@import 'elements/shop';
+@import 'elements/svg';
+@import 'elements/footer';
+
+
+// MESS
+.steps-container {
+  @include mq(tablet) {
+    width: 60%;
+  }
+  @include mq(desktop) {
+    width: 50%;
+  }
+}
+
+// --
+
+.pack-container {
+  clear: none;
+  @include mq('tablet') {
+    background: none;
+  }
+}
+.info-header {
+  @include mq('tablet') {
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: 800;
+    margin-top: 0;
+    color: inherit;
+    margin-bottom: 2em !important;
+  }
+}
+.pack-block {
+  width: 40px;
+  height: 12px;
+}
+.product-pack-title {
+  padding-left: 2.4em;
+}
+.info-block {
+  width: 40px;
+  height: 12px;
+  @include mq('tablet') {
+    display: block!important;
+  }
+}
+
+// --
+
+.img-cart {
+  width: 20%!important;
+  height: inherit!important;
+}
+#card-expiry {
+  width: 49%;
+}
+.payment:hover {
+    background-color: #5e5e5e;
+    cursor: pointer;
+    box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.1)
+}
+.payment-types-container {
+  display: flex;
+  flex-direction: column;
+   & > div {
+    order: 3;
+  }
+  .payment-type-cb {
+    order: 0;
+  }
+  .payment-type-rib {
+    order: 1;
+  }
+  .payment-type-cheque {
+    order: 2;
+  }
+}
+
+// --
+
+.order-tab {
+  @include mq('mobile') {
+    padding: 1em !important
+  }
+}
+
+.order-detail {
+  @include mq('mobile') {
+    font-size: 1em;
+  }
+}
+
+// --
+
+.total-container {
+  @include mq('tablet') {
+    text-align: right;
+  }
+}
+
+.container-border {
+  @include mq('tablet'){
+    border-bottom: 1px solid #dddddd;
+  }
+}
+
+.article-headers {
+  @include mq('desktop') {
+    display: block !important;
+  }
+}
+.box_products {
+    display: flex;
+    width: 16em;
+    background-color: white;
+    border-radius: 10px;
+    padding: 1em;
+    border: 1px solid #ededed;
+    margin-bottom: 0.5em;
+    align-items: center;
+}
+
+.box_products.expanded {
+    flex-direction: column;
+}
+
+.box_products img {
+  border: 1px solid #f2f2f2;
+  margin-bottom: 1em;
+  max-width: 10em;
+}
+
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 740px;
+    min-height: 100px;
+    justify-content: space-around;
+    overflow-y: scroll;
+}
+
+.box_products .attributes {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0.5em;
+    width: 100%;
+}
+
+.bubble {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  position:relative;
+  margin: 4px;
+  
+  & div {
+    content: '';
+    width: 15px;
+    height: 30px;
+  }
+  
+  & div:first-child:not(.full) {
+    float: left;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+
+  & div:last-child:not(.full) {
+    float: right;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  &.is-selected {
+    box-shadow: 0px 0px 0px 3px #a7a0a0;
+  }
+
+  & .full {
+    width: 30px;
+    border-radius: 100%;
+  }
+}
+
+@import 'layouts/app';
+@import 'layouts/shipping';
+
+@import 'helpers/all';

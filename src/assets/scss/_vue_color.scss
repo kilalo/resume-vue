@@ -1,0 +1,28 @@
+.vc-compact.vc-compact--village {
+  padding: 0;
+  width: 100%;
+
+  .vc-compact-color-item {
+    width: 8.334%;
+    height: auto;
+    margin: 0;
+    box-shadow: none;
+
+    &:after {
+      content: '';
+      display: block;
+      padding-top: 100%;
+    }
+  }
+
+  .vc-compact-dot {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 0;
+    opacity: 1;
+    background: none;
+    border: 4px solid #fff;
+  }
+}

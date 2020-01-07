@@ -1,0 +1,60 @@
+.input {
+  font-size: 1em;
+  color: color(black);
+  background: none;
+  border: none;
+  border-bottom: 1px solid color(gray);
+  border-radius: 0;
+  padding: 0.5em;
+  display: inline-block;
+  outline: none;
+
+  &:focus {
+    border-color: color(primary);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+select.input {
+  height: 2.375em;
+}
+
+.radio,
+.checkbox {
+  position: relative;
+  cursor: pointer;
+
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    margin: 0;
+  }
+}
+
+.checkbox--small-text {
+  font-size: 0.5em;
+  @include mq(mobile) {
+    font-size: inherit;
+  }
+}
+
+.radio--block > span {
+  display: block!important;
+}
+
+.input-white {
+  &:focus {
+    border-color: #fff;
+  }
+  &::placeholder {
+  opacity: 1;
+  color: #fff;
+  }
+}

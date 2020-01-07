@@ -1,0 +1,38 @@
+.image {
+  position: relative;
+  display: block;
+
+  &[class*="is-"] {
+    overflow: hidden;
+    
+    &:before {
+      content: "";
+      display: block;
+      position: relative;
+    }
+
+    img {
+      position: absolute;
+      width: 102%;
+      height: 102%;
+      top: -1%;
+      bottom: -1%;
+      left: -1%;
+      right: -1%;
+      max-width: none;
+      max-height: none;
+      object-fit: cover;
+    }
+  }
+
+  &.image--contain img {
+    object-fit: contain;
+  }
+
+  &.is-4by3:before { padding-top: ((3 / 4) * 100%) }
+  &.is-3by4:before { padding-top: ((4 / 3) * 100%) }
+  &.is-1by1:before { padding-top: 100% }
+  &.is-1by2:before { padding-top: 200% }
+  &.is-2by1:before { padding-top: 50% }
+  &.is-3by1:before { padding-top: 33.334% }
+}

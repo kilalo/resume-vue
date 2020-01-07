@@ -1,0 +1,13 @@
+.overlaye {
+  position: absolute;
+  z-index: 20;
+  background-color: fade-out(color(white), 0.6);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  &[disabled] {
+    cursor: not-allowed;
+  }
+}

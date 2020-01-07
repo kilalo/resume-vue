@@ -1,0 +1,45 @@
+@import 'node_modules/@glidejs/glide/src/assets/sass/glide.core';
+@import 'node_modules/@glidejs/glide/src/assets/sass/glide.theme';
+
+.glide-container {
+  touch-action: manipulation
+}
+
+.glide {
+  touch-action: manipulation
+}
+
+.glide__arrow {
+  padding: 0;
+  width: 3em;
+  height: 3em;
+  line-height: 3em;
+  text-align: center;
+  box-sizing: content-box;
+  border-radius: 3em;
+  background-color: fade-out(color(black), 0.5)
+}
+
+.glide__arrow i {
+  font-size: 2em;
+}
+
+.glide__bullets {
+  bottom: 0.5em;
+}
+
+.glide__bullet {
+  box-shadow: shadow();
+}
+
+.glide__bullet:hover,
+.glide__bullet:focus {
+    border: 2px solid color(blue);
+    background-color: fade-out(color(white), 0.5);
+}
+
+.glide__bullet--active,
+.glide__bullet--active:focus,
+.glide__bullet--active:hover {
+  background-color: color(blue);
+}

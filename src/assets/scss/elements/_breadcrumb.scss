@@ -1,0 +1,46 @@
+.breadcrumb {
+  list-style-type: none;
+  padding-left: 0;
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+
+  .dropdown-menu .menu ul {
+    padding: 0;
+  }
+}
+
+.breadcrumb-item {
+  display: inline-block;
+  text-align: center;
+  color: color(blue);
+  font-weight: bold;
+  margin-right: 0.5em;
+
+  > a,
+  > button {
+    display: bold;
+    vertical-align: middle;
+  }
+
+  &:last-child {
+    margin-right: 0;
+
+    > a,
+    > button {
+    .breadcrumb-item-separator {
+        display: none;
+      }
+    }
+  }
+
+  &:not(:nth-last-of-type(-n+2)) {
+    display: none;
+  }
+
+  @include mq(tablet) {
+    &:not(:nth-last-of-type(-n+2)) {
+      display: inline-block;
+    }
+  }
+}

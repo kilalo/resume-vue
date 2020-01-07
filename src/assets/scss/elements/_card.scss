@@ -1,0 +1,32 @@
+.card {
+  background-color: color(white);
+  color: color(black);
+  box-shadow: shadow(small);
+  border-radius: 0.2em;
+}
+
+.card-header {
+  position: relative;
+  padding: 1em;
+  border-bottom: 1px solid color(gray);
+
+  > i {
+    position: absolute;
+    top: 50%;
+    right: 1em;
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    line-height: 1em;
+    margin-top: -0.5em;
+  }
+}
+
+.card-content {
+  padding: 1em;
+}
+
+.card-footer {
+  padding: 1em;
+  text-align: center;
+}

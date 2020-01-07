@@ -1,0 +1,15 @@
+.combinations-button--selected {
+    background: inherit;
+    border-color: inherit;
+    color: inherit;
+}
+.combinations-button--canselect {
+    background: color(transparent);
+    border-color: inherit;
+    color: inherit;
+}
+
+.combinations-button--unselected {
+    color: color(gray);
+    border-color: inherit;
+}

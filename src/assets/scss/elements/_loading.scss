@@ -1,0 +1,115 @@
+  $timeAnimLoad: 9s;
+
+// anim
+  @keyframes loading {
+    0% {
+      opacity: 0;
+      color: transparent;
+      transform: rotate(-90deg);
+    }
+    12% {
+      opacity: 1;
+      color: white;
+      transform: rotate(0deg);
+    }
+    24% {
+      opacity: 0;
+      color: transparent;
+    }
+    100% {
+      opacity: 0;
+      color: transparent;
+      transform: rotate(270deg);
+    }
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: scale(1);
+    }
+    60% {
+      transform: scale(0.85)
+    }
+    100% {
+      transform: scale(1)
+    }
+  }
+
+// base
+  .loading-page {
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: fade-out(color(white), 0.5);
+    text-align: center;
+    font-size: 1em;
+    font-family: sans-serif;
+  }
+
+  #__nuxt > .loading-page {
+    position: fixed;
+    font-size: 2em;
+  }
+
+  .loading-page .dots {
+    height: 100%;
+    animation: bounce $timeAnimLoad/4 infinite ease;
+
+    i {
+      position: absolute;
+      display: block;
+      width: 2em;
+      height: 2em;
+      line-height: 2em;
+      text-align: center;
+      border-radius: 100%;
+      background-color: color(blue);
+      color: color(white);
+      left: 50%;
+      top: 50%;
+      margin: -1em 0 0 -1em;
+      animation: loading $timeAnimLoad infinite linear;
+
+      &:nth-child(2) {
+        background-color: color(yellow);
+        animation-delay: -1 * $timeAnimLoad / 8;
+      }
+
+      &:nth-child(3) {
+        background-color: color(green);
+        animation-delay: -2 * $timeAnimLoad / 8;
+      }
+
+      &:nth-child(4) {
+        background-color: color(red);
+        animation-delay: -3 * $timeAnimLoad / 8;
+      }
+
+      // p2
+
+      &:nth-child(5) {
+        background-color: color(green);
+        animation-delay: -4 * $timeAnimLoad / 8;
+      }
+
+      &:nth-child(6) {
+        background-color: color(yellow);
+        animation-delay: -5 * $timeAnimLoad / 8;
+      }
+
+      &:nth-child(7) {
+        background-color: color(blue);
+        animation-delay: -6 * $timeAnimLoad / 8;
+      }
+
+      &:nth-child(8) {
+        background-color: color(red);
+        animation-delay: -7 * $timeAnimLoad / 8;
+      }
+    }
+  }

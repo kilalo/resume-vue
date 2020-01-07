@@ -1,0 +1,18 @@
+@import '~/node_modules/vue-date-pick/dist/vueDatePick.css';
+
+.vdpWithInput {
+  font-size: 1em !important;
+  
+  & > input {
+    @extend .input;
+    width: 100%;
+  }
+
+  &:before {
+    line-height: 1.2em;
+  }
+}
+
+.vdpOuterWrap {
+  font-size: 0.7em !important;
+}

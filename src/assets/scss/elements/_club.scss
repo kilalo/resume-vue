@@ -1,0 +1,164 @@
+.club-container {
+  @include mq(tablet) {
+    padding-right: 1em!important;
+  }
+}
+
+.club-header-info {
+  padding: 1em;
+  @include mq(tablet) {
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 2em;
+  }
+}
+
+.club-join-mobile {
+  right: -3.5em;
+  width: 7em;
+}
+
+.club-home-svg,
+.club-svg-wave {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  max-height: 20em;
+  z-index: 0;
+  @include mq(tablet) {
+    max-height: 22em;
+  }
+  @include mq(wide) {
+    max-height: 26em;
+  }
+}
+
+.club-home-svg {
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.club-main {
+  position: relative;
+  background-color: color(white);
+  color: color(black);
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+}
+
+.club-shop-logo {
+  width: 1.5em;
+}
+
+.club-logo {
+  position: relative;
+  color: color(white);
+
+  &:after {
+    content: attr(title);
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 0.9em;
+    color: inherit;
+    line-height: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-transform: uppercase;
+    overflow: hidden;
+    margin-top: -0.5em;
+  }
+
+  img {
+    object-fit: contain !important;
+  }
+}
+
+.club-search {
+  position: relative;
+  padding: 2em 1em;
+  background-color: color(light);
+}
+
+.club-description {
+  position: relative;
+  // min-height: 2em;
+  // max-height: 8em;
+  // overflow: hidden;
+  // transition: max-height transition();
+
+  // &:after {
+  //   content: '';
+  //   display: block;
+  //   position: absolute;
+  //   bottom: 0;
+  //   left: 0;
+  //   right: 0;
+  //   opacity: 1;
+  //   height: 50%;
+  //   transition: opacity transition();
+
+  //   @include gradient(bottom, fade-out(color(white), 1), fade-out(color(white), 0))
+  // }
+
+  // &.is-open {
+  //   max-height: 100em;
+
+  //   &:after {
+  //     opacity: 0;
+  //   }
+  // }
+}
+
+
+.club-ban-upload {
+  position: absolute;
+  z-index: 5;
+  top: 1em;
+  left: 1em;
+  opacity: 0.6;
+
+  *:hover > &,
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.club-ban-img {
+  display: none!important;
+  img {
+    bottom: auto;
+    height: auto;
+  }
+  @include mq(tablet) {
+    display: block!important;
+  }
+}
+
+.club-cashback {
+  clear: none!important;
+}
+.club-comingsoon-title {
+  @include mq(desktop) {
+    text-align: right;
+    padding-right: 1em;
+  }
+  > span {
+    display: block;
+    @include mq(tablet) {
+      display: inline;
+    }
+    @include mq(desktop) {
+      display: block;
+    }
+  }
+}
+.club-coming-soon-icon {
+  font-size: 5em;
+  padding-bottom: 0.2em;
+  padding-top: 0.2em;
+}

@@ -1,0 +1,188 @@
+@each $name, $theme in $themes {
+
+    .is-club_theme--#{$name} {
+        background-color: map-get($theme, 'background');
+        color: map-get($theme, 'color');
+    }
+
+    .club_theme--#{$name} {
+
+        .is-club_theme {
+            background-color: map-get($theme, 'background');
+            color: map-get($theme, 'color');
+
+            &.glide__bullet--active {
+                background-color: map-get($theme, 'color');
+                color: map-get($theme, 'background');
+            }
+        }
+        .is-club_theme--alt {
+            background-color: if(
+                map-get($theme, 'background_alt'),
+                map-get($theme, 'background_alt'),
+                map-get($theme, 'color')
+                );
+            color: if(
+                map-get($theme, 'color_alt'),
+                map-get($theme, 'color_alt'),
+                map-get($theme, 'background')
+                );
+
+            &.glide__bullet--active {
+                background-color: if(
+                    map-get($theme, 'color_alt'),
+                    map-get($theme, 'color_alt'),
+                    map-get($theme, 'background')
+                    );
+                color: if(
+                    map-get($theme, 'background_alt'),
+                    map-get($theme, 'background_alt'),
+                    map-get($theme, 'color')
+                    );
+            }
+        }
+
+        .bg-club_theme {
+            background-color: map-get($theme, 'background');
+        }
+        .bg-club_theme--alt {
+            background-color: if(
+                map-get($theme, 'background_alt'),
+                map-get($theme, 'background_alt'),
+                map-get($theme, 'color')
+                );
+        }
+        
+        // border color
+        .br-club_theme {
+            border-color: map-get($theme, 'background');
+        }
+        .br-club_theme--alt {
+            border-color: if(
+                map-get($theme, 'background_alt'),
+                map-get($theme, 'background_alt'),
+                map-get($theme, 'color')
+                );
+        }
+        
+        // color
+        .txt-club_theme {
+            color: map-get($theme, 'color');
+        }
+        .txt-club_theme--alt {
+            color: if(
+                map-get($theme, 'color_alt'),
+                map-get($theme, 'color_alt'),
+                map-get($theme, 'background')
+                );
+        }
+        
+        // fill
+        .fill-club_theme {
+            fill: map-get($theme, 'background');
+        }
+        .fill-club_theme--alt {
+            fill: if(
+                map-get($theme, 'background_alt'),
+                map-get($theme, 'background_alt'),
+                map-get($theme, 'color')
+                );
+        }
+        
+        // stroke
+        .stroke-club_theme {
+            stroke: map-get($theme, 'background');
+        }
+        .stroke-club_theme--alt {
+            stroke: if(
+                map-get($theme, 'background_alt'),
+                map-get($theme, 'background_alt'),
+                map-get($theme, 'color')
+                );
+        }
+
+        @each $breakpoint, $point in $breakpoints {
+            @include mq($breakpoint) {
+                // is
+                .is-club_theme--#{$breakpoint} {
+                    background-color: map-get($theme, 'background');
+                    color: map-get($theme, 'color');
+                }
+                .is-club_theme--alt--#{$breakpoint} {
+                    background-color: if(
+                        map-get($theme, 'background_alt'),
+                        map-get($theme, 'background_alt'),
+                        map-get($theme, 'color')
+                        );
+                    color: if(
+                        map-get($theme, 'color_alt'),
+                        map-get($theme, 'color_alt'),
+                        map-get($theme, 'background')
+                        );
+                }
+
+                // bg
+                .bg-club_theme--#{$breakpoint} {
+                    background-color: map-get($theme, 'background');
+                }
+                .bg-club_theme--alt--#{$breakpoint} {
+                    background-color: if(
+                        map-get($theme, 'background_alt'),
+                        map-get($theme, 'background_alt'),
+                        map-get($theme, 'color')
+                        );
+                }
+                
+                // txt
+                .txt-club_theme--#{$breakpoint} {
+                    color: map-get($theme, 'color');
+                }
+                .txt-club_theme--alt--#{$breakpoint} {
+                    color: if(
+                        map-get($theme, 'color_alt'),
+                        map-get($theme, 'color_alt'),
+                        map-get($theme, 'background')
+                        );
+                }
+                
+                // border color
+                .br-club_theme {
+                    border-color: map-get($theme, 'background');
+                }
+                .br-club_theme--alt {
+                    border-color: if(
+                        map-get($theme, 'background_alt'),
+                        map-get($theme, 'background_alt'),
+                        map-get($theme, 'color')
+                        );
+                }
+                
+                // fill
+                .fill-club_theme--#{$breakpoint} {
+                    fill: map-get($theme, 'background');
+                }
+
+                .fill-club_theme--alt--#{$breakpoint} {
+                    fill: if(
+                        map-get($theme, 'background_alt'),
+                        map-get($theme, 'background_alt'),
+                        map-get($theme, 'color')
+                        );
+                }
+                
+                // stroke
+                .stroke-club_theme--#{$breakpoint} {
+                    stroke: map-get($theme, 'background');
+                }
+
+                .stroke-club_theme--alt--#{$breakpoint} {
+                    stroke: if(
+                        map-get($theme, 'background_alt'),
+                        map-get($theme, 'background_alt'),
+                        map-get($theme, 'color')
+                        );
+                }
+            }
+        }
+    }
+}

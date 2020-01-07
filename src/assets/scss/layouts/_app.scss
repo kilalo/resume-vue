@@ -1,0 +1,132 @@
+.app {
+  position: relative;
+  padding-top: $app-navbar-height;
+  min-height: 100vh;
+  overflow-x: hidden;
+  @include mq(desktop) {
+    padding-top: $app-navbar-height-desktop;
+    min-height: 100vh;
+  }
+  @include mq(wide) {
+    padding-top: $app-navbar-height-wide;
+    min-height: 100vh;
+  }
+  
+  &.app--admin {
+    padding-top: 2 * $app-navbar-height;
+    min-height: 100vh;
+    @include mq(desktop) {
+      padding-top: 2 * $app-navbar-height-desktop;
+      min-height: 100vh;
+    }
+    @include mq(wide) {
+      padding-top: 2 * $app-navbar-height-wide;
+      min-height: 100vh;
+    }
+  }
+}
+
+.app-navbar,
+.app-viewport {
+  transition: transform transition();
+}
+
+.app-panel {
+  box-shadow: shadow(xsmall);
+}
+
+.app-navbar {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  // border-top: 0.25em solid color(blue);
+  // height: $app-navbar-height;
+
+  @include mq(desktop) {
+    // height: $app-navbar-height-desktop;
+  }
+  @include mq(wide) {
+    // height: $app-navbar-height-wide;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0.25em;
+    background: -webkit-linear-gradient(0deg,
+      color(blue) 0%,
+      color(blue) 25%,
+      color(yellow) 25%,
+      color(yellow) 50%,
+      color(green) 50%,
+      color(green) 75%,
+      color(red) 75%,
+      color(red) 100%
+      );
+  }
+}
+
+.app-viewport {
+  position: relative;
+  min-height: calc(100vh - 8em)
+}
+
+.app-panel {
+  position: fixed;
+  z-index: 30;
+  top: 0;
+  left: 0;
+  width: $app-panel-width;
+  height: 100vh;
+  background: color(white);
+  transition: transform transition();
+  transform: translateX(- $app-panel-width);
+
+  @include mq(desktop) {
+    transform: translateX(0) !important;
+
+    & ~ .app-navbar,
+    & ~ .app-viewport {
+      // transform: translateX(0) !important;
+      padding-left: $app-panel-width;
+    }
+  }
+}
+
+.app-panel-overlaye {
+  position: fixed;
+  z-index: 25;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: fade-out(color(white), 0.2);
+  touch-action: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: transition();
+}
+
+// state
+.app-show-panel {
+  .app-navbar,
+  .app-viewport {
+    // transform: translateX($app-panel-width);
+  }
+
+  .app-panel {
+    transform: translateX(0);
+  }
+
+  .app-panel-overlaye {
+    opacity: 1;
+    visibility: visible;
+  }
+}
