@@ -7,7 +7,7 @@
       <img
         v-if="img" 
         class="w4 fll"
-        :src="'@/assets/img/companies/' . img" />
+        :src="getImgLink" />
       <div class="dib ml5 mt5">
         <span class="fwb db">
           {{ title }}   
@@ -64,6 +64,12 @@ export default {
       default: () => []
     }
   },
+  computed: {
+    getImgLink () {
+      const url = `img/companies/${this.img}`
+      return url
+    }
+  }
 }
 </script>
 

@@ -4,7 +4,7 @@
       <div class="card-header tac p20">
         <div>
           <img 
-            src="./assets/img/profile.png" 
+            src="/img/profile.png" 
             alt="profile-picture"
             class="w6" />
           </div>
