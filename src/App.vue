@@ -236,20 +236,8 @@
     </span>
     <span
       class="tac db m10">
-       Kilalo.io
+       kilalo.io
     </span>
-    <draggable 
-      v-model="myArray"
-      class="grid"
-      @change="checkMove($event)">
-      <div 
-        v-for="element in myArray" 
-        :key="element.id"
-        class="ma w15 bg-blue tac h8 p10 m10 item g3"
-        id="Dragme">
-          {{element.name}}
-        </div>
-    </draggable>
   </div>
 </template>
 
@@ -269,7 +257,6 @@ import CheckCircleOutline from 'mdi-vue/CheckCircleOutline'
 import Project from './components/project.vue'
 import Formation from './components/formation.vue'
 import Experience from './components/experience.vue'
-import draggable from 'vuedraggable'
 
 export default {
   name: 'app',
@@ -285,8 +272,7 @@ export default {
     CheckCircleOutline,
     Project,
     Experience,
-    Formation,
-    draggable
+    Formation
   },
   data() {
     return {
@@ -325,13 +311,6 @@ export default {
       contentApesa: 'Stage qui résulte de ma première expérience professionnelle dans l\'IT. Création d\'une interface web permettant d\'alimenter une base de données de manière intuitive pour l\'utilisateur .',
     }
   },
-  methods: {
-    checkMove(e){
-      /* eslint-disable no-console */
-      console.log(e);
-      /* eslint-enable no-console */
-    }
-  }
 }
 </script>
 
