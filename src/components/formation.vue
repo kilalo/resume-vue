@@ -3,18 +3,18 @@
     <span class="fwb db">
       {{ year }}
     </span>
-    <span class="fzs dib pl10 pt5">
+    <span class="fzm dib pl10 pt5">
       {{ title }}  
       <span class="fwb">
         {{ acronyme }}
       </span>
     </span>
-    <span class="fzxs db pl20 pt5">
+    <span class="fzs db pl20 pt5">
       {{ place }}
     </span>
     <span 
       v-if="link"
-      class="fzxs db pl20 pt5">
+      class="fzs db pl20 pt5">
       <a 
         :href="link" 
         target="_blank"

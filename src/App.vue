@@ -6,7 +6,7 @@
           <img 
             src="/img/profile.png" 
             alt="profile-picture"
-            class="w6" />
+            class="w6 rad50 mb5" />
           </div>
         <span class="fzxl fwb">
           Killian Challeau
@@ -18,25 +18,25 @@
           class="grid tal mt10 ml30">
           <div class="g12 g6--mobile g4--tablet">
             <cake-variant width="18" />
-            <span class="fzxs va6 dib pl10">
+            <span class="fzs va6 dib pl10">
               2 Novembre 1993
             </span>
           </div>
           <div class="g12 g6--mobile g4--tablet">
             <pin width="18" />
-            <span class="fzxs va6 dib pl10">
+            <span class="fzs va6 dib pl10">
               Bordeaux, FRANCE
             </span>
           </div>
           <div class="g12 g6--mobile g4--tablet">
             <phone width="18" />
-            <span class="fzxs va6 dib pl10">
+            <span class="fzs va6 dib pl10">
               06 98 97 94 05
             </span>
           </div>
           <div class="g12 g6--mobile g4--tablet">
             <email width="18" />
-            <span class="fzxs va6 dib pl10">
+            <span class="fzs va6 dib pl10">
                <a 
                 href="mailto:killian.challeau@hotmail.fr"
                 class="txt-aqua-sky--hover">
@@ -46,7 +46,7 @@
           </div>
           <div class="g12 g6--mobile g4--tablet">
             <linkedin-box width="18" />
-            <span class="fzxs va6 dib pl10">
+            <span class="fzs va6 dib pl10">
               <a 
                 href="https://www.linkedin.com/in/killian-challeau/" 
                 target="_blank"
@@ -57,7 +57,7 @@
           </div>
           <div class="g12 g6--mobile g4--tablet">
             <gitlab width="18" />
-            <span class="fzxs va6 dib pl10">
+            <span class="fzs va6 dib pl10">
               <a 
                 href="https://gitlab.com/kilalo" 
                 target="_blank"
@@ -71,11 +71,13 @@
       <div class="card-content p20">
         <div>
           <div class="mb20">
+            <account width="34" height="34" />
             <span class="fzl fwb va8 dib ml10">
-              À propos de moi
+              À propos
             </span>
           </div>
-          <p>
+          <p
+            class="lh3 fzs">
             {{ txtBio }}
           </p>
         </div>
@@ -83,7 +85,7 @@
           <div class="mt20 mb20">
             <wallet-travel width="34" height="34" />
             <span class="fzl fwb va8 dib ml10">
-              Mes expériences professionnelles
+              Expériences professionnelles
             </span>
           </div>
           <div class="under-container m5">
@@ -132,7 +134,7 @@
             </div>
           </div>
         </div>
-        <div>
+        <!-- <div>
           <div class="mt20 mb20">
             <check-circle-outline width="34" height="34" />
             <span class="fzl fwb va8 dib ml10">
@@ -154,11 +156,11 @@
           <project
             class="m10"
             :title="'StudyShare'"/>
-        </div>
+        </div> -->
         <div class="mt20 mb20">
           <school width="34" height="34" />
           <span class="fzl fwb va8 dib ml10">
-            Mes études
+            Formations
           </span>
         </div>
           <div class="under-container m5">
@@ -221,22 +223,15 @@
         <div>
         <div class="mt20 mb20">
           <span class="fzl fwb">
-            Mes centres d'intérêts
+            Centres d'intérêts
           </span>
         </div>
-        <p>
-          {{ txtBio }}
-        </p>
         </div>
       </div>  
     </div>
     <span
       class="tac db m10">
        Made with Vue JS
-    </span>
-    <span
-      class="tac db m10">
-       kilalo.io
     </span>
   </div>
 </template>
@@ -251,16 +246,16 @@ import Pin from 'mdi-vue/Pin'
 import Gitlab from 'mdi-vue/Gitlab'
 import School from 'mdi-vue/School'
 import WalletTravel from 'mdi-vue/WalletTravel'
-import CheckCircleOutline from 'mdi-vue/CheckCircleOutline'
+import Account from 'mdi-vue/Account'
 
 // COMPONENTS
-import Project from './components/project.vue'
 import Formation from './components/formation.vue'
 import Experience from './components/experience.vue'
 
 export default {
   name: 'app',
   components: {
+    Account,
     Phone,
     Email,
     LinkedinBox,
@@ -269,8 +264,6 @@ export default {
     Gitlab,
     School,
     WalletTravel,
-    CheckCircleOutline,
-    Project,
     Experience,
     Formation
   },
@@ -286,7 +279,7 @@ export default {
         {'id':8,'name':'C765687'},
 
       ],
-      txtBio : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
+      txtBio : "Titulaire d'un DUT Statistique et Informatique Décisionnelle (STID) ainsi que d'un master en licence d'informatique de gestion (MIAGE), j’exerce mes savoirs faire depuis 2019 majoritairement en tant que développeur back-end. Mes diverses expériences me confrontant de plus en plus à la partie front-end du web me caractérise davantage aujourd’hui en tant que développeur full stack. Passionné de nouvelles technologies et plus particulièrement du monde du web, ainsi que doté d’un goût pour le challenge, j’aspire à répondre à des problématiques de conception et d’expérience utilisateur.",
       contentMonkey: 'Stage et contrat de professionnalisation finalisant mes études en MASTER MIAGE se poursuivant sur un CDI dans une Start-up en pleine croissance prônant l\'utilisation d\'une méthode agile afin de mener au mieux ses activités. Mes missions étaient variées et m\'ont apporté une solide expérience dans le monde de l\'informatique, et plus particulièrement du web, qui ont pu confirmer ma volonté de poursuivre ma carrière dans ce secteur.',
       moreMonkey: [
         'Intégration de l\'équipe sur le projet Sports Village : https://sports-village.com/',
@@ -295,7 +288,7 @@ export default {
         'Administration système',
         'Administration réseaux'
       ],
-      contentBPACA: 'À la suite d\'un état des lieux référençant plus de 200 agences de la Banque Populaire, j\'étais en charge de traiter statistiquement les données récolées afin d\'améliorer l\'efficacité des procédés mis en place par le département Sécurité des Personnes et des Biens.',
+      contentBPACA: 'À la suite d\'un état des lieux référençant plus de 200 agences de la Banque Populaire, j\'étais en charge de traiter statistiquement les données récoltées afin d\'améliorer l\'efficacité des procédés mis en place par le département Sécurité des Personnes et des Biens.',
       moreBPACA: [
         'Traitement des données avec Visual Basic et création de Dataviz',
         'Conception d\'une base de données',
