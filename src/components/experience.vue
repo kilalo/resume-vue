@@ -4,12 +4,15 @@
       {{ year }} 
     </span>
     <div class="m10">
-      <img
-        v-if="img" 
-        class="w4 fll"
-        :src="getImgLink" />
+      <div
+        class="block-img">
+          <img
+            v-if="img" 
+            class="w4"
+            :src="getImgLink" />
+      </div>
       <div class="dib ml5 mt5">
-        <span class="fwb db">
+        <span class="my-subtitle fwb db">
           {{ title }}   
         </span>
         <span class="fll fzs fwb db mt5">

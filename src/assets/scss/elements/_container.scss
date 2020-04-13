@@ -1,8 +1,9 @@
 .container {
-  max-width: 60em;
+  max-width: 65em !important;
   margin: auto;
   position: relative;
   padding: 0 1em;
+  background-color: transparent !important;
 
   h1 {
     margin: 2em 0 1em 0;

@@ -74,6 +74,7 @@
 // display
 .db { display: block }
 .dib { display: inline-block }
+.dit { display: table}
 
 // position
 .poss { position: static }
@@ -501,4 +502,34 @@
 }
 .bw{
   word-wrap: break-word;
+}
+
+@media screen and (max-width: 600px) {
+  .my-title {
+      font-size: 16px !important;
+  }
+  .my-subtitle {
+    font-size: 14px !important;
+  }
+  .block-img {
+    text-align: center
+  }
+  .head-info {
+    display: table !important;
+    margin: auto !important;
+  }
+}
+@media screen and (min-width: 601px) {
+  .my-title {
+      font-size: 22px !important;
+  }
+  .my-subtitle {
+    font-size: 18px !important;
+  }
+  .block-img {
+    float: left
+  }
+  .head-info {
+    margin-left: 3.5em !important
+  }
 }

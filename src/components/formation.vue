@@ -3,7 +3,7 @@
     <span class="fwb db">
       {{ year }}
     </span>
-    <span class="fzm dib pl10 pt5">
+    <span class="my-subtitle fzm dib pl10 pt5">
       {{ title }}  
       <span class="fwb">
         {{ acronyme }}
