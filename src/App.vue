@@ -2,7 +2,6 @@
 <v-app
   id="resume"
   class="container">
- 
   <div class="card">
     <div class="card-header tac p20">
       <div>
@@ -81,6 +80,13 @@
           </v-col>
         </v-row>
       </v-container>
+      <v-btn
+        color="#CDEBF6"
+        href="/CV_KC_2020.pdf"
+        target="_blank"
+        raised>
+        Version PDF
+      </v-btn>
     </div>
     <div class="card-content p20">
       <div>
@@ -153,7 +159,7 @@
             <v-row>
               <v-col
                 cols="12" sm="6">
-                <v-card-title>Ops</v-card-title>
+                <v-card-title>DevOps</v-card-title>
                 <v-card-text>
                   <v-chip-group
                     class="txt-color"
