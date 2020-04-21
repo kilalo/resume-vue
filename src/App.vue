@@ -3,7 +3,7 @@
   id="resume"
   class="container">
   <div class="card">
-    <div class="card-header tac p20">
+    <div class="card-header tac p10">
       <div>
         <img 
           src="/img/profile.png" 
@@ -88,7 +88,7 @@
         Version PDF
       </v-btn>
     </div>
-    <div class="card-content p20">
+    <div class="card-content p10">
       <div>
         <div class="mb20">
           <account width="34" height="34" />
