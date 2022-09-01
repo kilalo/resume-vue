@@ -106,18 +106,17 @@
   &:hover:not(:active) {
     transform: scale(1.2) translate(-50%);
   }
-  
-    .text-circle-range {
-      opacity: 1;
-      transform: translate(-50%, calc(-100% + -13px)) scale(1) rotate(0deg);
-      visibility: visible;
-    }
-    .text-circle-range-bottom {
-      opacity: 1;
-      transform: translate(-50%, calc(100% + -3px)) scale(1) rotate(0deg);
-      visibility: visible;
-    }
-  
+
+  .text-circle-range {
+    opacity: 1;
+    transform: translate(-50%, calc(-100% + -13px)) scale(1) rotate(0deg);
+    visibility: visible;
+  }
+  .text-circle-range-bottom {
+    opacity: 1;
+    transform: translate(-50%, calc(100% + -3px)) scale(1) rotate(0deg);
+    visibility: visible;
+  }
 }
 
 // &:active
@@ -237,7 +236,7 @@
 }
 
 @each $name, $color in $colors {
-  .range--#{$name} {
-    color: $color
+  .range--#{"" + $name} {
+    color: $color;
   }
 }
